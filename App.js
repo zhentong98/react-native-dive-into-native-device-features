@@ -4,6 +4,7 @@ import {StatusBar} from "expo-status-bar";
 
 import AllPlaces from "./screens/AllPlaces";
 import AddPlace from "./screens/AddPlace";
+import Map from "./screens/Map";
 
 import IconButton from "./components/UI/IconButton";
 
@@ -45,7 +46,12 @@ export default function App() {
                         component={AddPlace}
                         options={{
                             title: 'Add a New Place',
+                            headerBackTitle: 'Back'
                         }}
+                    />
+                    <Stack.Screen
+                        name="Map"
+                        component={Map}
                     />
                 </Stack.Navigator>
             </NavigationContainer>
